@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f6f3ee;
+  --ink: #161616;
+  --metal: #b7b3ad;
+  --steel: #d8d5cf;
+  --smoke: #8a8781;
+  --vermilion: #c26c3a;
+  --verdigris: #1f7a63;
+  --glow: #f7d9a4;
+}
+
+@theme inline {
+  --color-background: var(--paper);
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-display);
+  --font-mono: var(--font-code);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-display), "Segoe UI", system-ui, sans-serif;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(circle at 10% 15%, rgba(247, 217, 164, 0.45), transparent 45%),
+    radial-gradient(circle at 90% 10%, rgba(183, 179, 173, 0.35), transparent 40%),
+    linear-gradient(120deg, #f6f3ee 0%, #f0ede7 45%, #ede9e2 100%);
+  background-attachment: fixed;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(22, 22, 22, 0.08);
+  box-shadow: 0 25px 60px rgba(22, 22, 22, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
