@@ -2,7 +2,7 @@ import { describe, expect, it, vi, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import type { ReactNode } from "react";
-import LearnIndex from "./page";
+import LearnClient from "./LearnClient";
 import { lessons } from "../lib/lessons";
 
 const useSearchParamsMock = vi.hoisted(
@@ -49,7 +49,7 @@ describe("/learn page", () => {
   });
 
   it("renders a working link for each lesson", () => {
-    render(<LearnIndex />);
+    render(<LearnClient />);
 
     lessons.forEach((lesson) => {
       const title = screen.getByText(lesson.title);
@@ -66,7 +66,7 @@ describe("/learn page", () => {
       .mockImplementation(() => true);
 
     const user = userEvent.setup();
-    render(<LearnIndex />);
+    render(<LearnClient />);
 
     const button = await screen.findByRole("button", {
       name: "Mark all complete",
