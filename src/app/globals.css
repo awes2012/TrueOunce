@@ -9,6 +9,9 @@
   --vermilion: #c26c3a;
   --verdigris: #1f7a63;
   --glow: #f7d9a4;
+  --font-display: "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-code: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 }
 
 @theme inline {
